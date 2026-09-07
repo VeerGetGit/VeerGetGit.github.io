@@ -1,0 +1,125 @@
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--nav-h) var(--section-pad-h) 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-deep);
+}
+
+/* Canvas star field */
+#starCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient glow */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 65% 40%, rgba(59,130,246,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 40% at 85% 85%, rgba(20,50,110,0.14) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4.5vw, 54px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.14em;
+  line-height: 1;
+  margin-bottom: -4px;
+  user-select: none;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 11vw, 128px);
+  font-weight: 700;
+  color: var(--blue-light);
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  margin-bottom: 36px;
+
+  /* Text gradient */
+  background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 60%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-tagline {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 580px;
+  margin-bottom: 52px;
+}
+
+.hero-tagline .arrow {
+  color: var(--blue);
+  font-size: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.hero-tagline p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  animation: bounce 2s infinite;
+  z-index: 1;
+}
+.hero-scroll svg { color: var(--blue); }
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (max-width: 600px) {
+  .hero-name { margin-bottom: 28px; }
+  .hero-tagline { margin-bottom: 40px; }
+  .btn-ghost { display: none; }
+}

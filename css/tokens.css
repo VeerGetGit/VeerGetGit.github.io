@@ -1,0 +1,48 @@
+/* ── DESIGN TOKENS ── */
+:root {
+  /* Colors */
+  --bg-deep:        #060d1a;
+  --bg-dark:        #0a1628;
+  --bg-card:        #0f1e35;
+  --bg-card-hover:  #132440;
+
+  --blue:           #3b82f6;
+  --blue-light:     #60a5fa;
+  --blue-glow:      rgba(59, 130, 246, 0.12);
+  --blue-border:    rgba(59, 130, 246, 0.18);
+  --blue-border-hv: rgba(59, 130, 246, 0.45);
+
+  --text-primary:   #f0f4ff;
+  --text-secondary: #8faac8;
+  --text-muted:     #4e6680;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'Courier New', Courier, monospace;
+
+  /* Spacing */
+  --section-pad-v: 100px;
+  --section-pad-h: 10vw;
+  --gap-card: 24px;
+
+  /* Radius */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-full: 100px;
+
+  /* Transitions */
+  --t-fast: 0.15s ease;
+  --t-base: 0.22s ease;
+  --t-slow: 0.35s ease;
+
+  /* Nav height */
+  --nav-h: 64px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --section-pad-v: 72px;
+    --section-pad-h: 24px;
+  }
+}
