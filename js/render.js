@@ -66,7 +66,7 @@ function renderProjects() {
   if (!container) return;
 
   container.innerHTML = DATA.projects.map(project => `
-    <a class="project-card reveal" href="${project.url}" target="_blank" rel="noopener">
+    <div class="project-card reveal" onclick="window.open('${project.url}', '_blank')">
       <div class="project-body">
         <div class="project-cat">${project.cat}</div>
         <div class="project-title">${project.title}</div>
@@ -76,7 +76,7 @@ function renderProjects() {
         </div>
       </div>
       <div class="project-arrow">${ARROW_ICON}</div>
-    </a>
+    </div>
   `).join('');
 }
 
