@@ -1,239 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harsh Veer Singh — AI Engineer & Full-Stack Developer building agentic systems, RAG pipelines and autonomous workflows.">
-  <title>Harsh Veer Singh — AI Engineer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harsh Veer Singh | Project Management and AI Engineering</title>
+<meta name="description" content="Harsh Veer Singh takes technical projects from problem definition to deployment, and builds the agentic AI systems inside them: LangGraph agents, RAG, and intrusion-detection research.">
+<meta name="theme-color" content="#190a0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/skills.css">
-  <link rel="stylesheet" href="css/experience.css">
-  <link rel="stylesheet" href="css/projects.css">
-  <link rel="stylesheet" href="css/honors.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/footer.css">
+<script type="importmap">
+{"imports":{
+  "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+}}
+</script>
 </head>
-<body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">HVS<span>.</span></a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about"      class="nav-link"><span class="nav-num">01</span>ABOUT</a></li>
-        <li><a href="#skills"     class="nav-link"><span class="nav-num">02</span>SKILLS</a></li>
-        <li><a href="#experience" class="nav-link"><span class="nav-num">03</span>EXPERIENCE</a></li>
-        <li><a href="#projects"   class="nav-link"><span class="nav-num">04</span>PROJECTS</a></li>
-        <li><a href="#contact"    class="nav-link"><span class="nav-num">05</span>CONTACT</a></li>
-      </ul>
-      <a href="mailto:harshveerstar1@gmail.com" class="nav-cta">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-        Email me
-      </a>
-    </div>
+<body data-view="both" data-char="A" data-side="right">
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="#hero">Harsh Veer Singh</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#approach">How I work</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <div class="seg" role="group" aria-label="Choose what to emphasize">
+    <button type="button" data-view="both" aria-pressed="true">Both</button>
+    <button type="button" data-view="eng" aria-pressed="false">Engineering</button>
+    <button type="button" data-view="pm" aria-pressed="false">Project management</button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section id="hero">
-    <canvas id="starCanvas"></canvas>
-    <div class="hero-content">
-      <div class="hero-sub">HARSH</div>
-      <h1 class="hero-name">VEER SINGH</h1>
-      <div class="hero-tagline">
-        <span class="arrow">&gt;</span>
-        <p>AI Engineer &amp; Full-Stack Developer — building agentic systems, RAG pipelines and autonomous workflows that turn intent into shipped product.</p>
-      </div>
-      <div class="hero-actions">
-        <a href="https://github.com/VeerGetGit" target="_blank" rel="noopener" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/hveersingh" target="_blank" rel="noopener" class="btn btn-outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="#contact" class="btn btn-ghost">GET IN TOUCH &nbsp;→</a>
-      </div>
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero" data-char="A" data-side="right">
+  <div class="wrap"><div class="panel plain">
+    <h1 id="name" aria-label="Harsh Veer Singh"><span class="line" aria-hidden="true">Harsh Veer</span><span class="line" aria-hidden="true">Singh</span></h1>
+
+    <p class="lead vb-only">I build agentic AI systems and the plan around them, from scoping and task breakdown to evaluation, deployment and documentation.</p>
+    <p class="lead ve-only">I build agentic AI systems (LangGraph agents, RAG pipelines, and ML models for intrusion detection) and measure them until they hold up.</p>
+    <p class="lead vp-only">I run technical projects from problem definition to deployment: requirements, task breakdown, testing, documentation, and keeping the people involved aligned. I can also build the AI systems inside them.</p>
+
+    <ul class="chips">
+      <li class="chip">Seeking a technical project management internship</li>
+      <li class="chip">B.Tech in Computer Science, 2027 · CGPA 8.46</li>
+      <li class="chip">Research intern at MNNIT Allahabad</li>
+      <li class="chip">Paper under review at IEEE Internet of Things Journal</li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="mailto:harshveerstar1@gmail.com">Email me</a>
     </div>
-  </section>
+    <p class="hint"><span class="mouse">Move your cursor, or press and hold. Space bends around it.</span><span class="touch">Touch the screen. Space bends around your finger.</span></p>
+  </div></div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">01</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Manifesto</span>
-      </div>
-      <h2 class="section-title">Why I build with agents</h2>
-      <div class="about-grid">
-        <div class="chapter-card reveal">
-          <div class="chapter-num">Chapter 01</div>
-          <div class="chapter-title">The Foundation</div>
-          <p>I'm a Computer Science undergraduate from Prayagraj, India — spending my days deep in algorithms, data structures and systems coursework, and my nights shipping side projects that go far beyond the syllabus.</p>
-        </div>
-        <div class="chapter-card reveal">
-          <div class="chapter-num">Chapter 02</div>
-          <div class="chapter-title">Research &amp; Systems Thinking</div>
-          <p>As a Research Intern at MNNIT Allahabad, I applied machine learning to intrusion detection — learning that good AI isn't just model accuracy, it's understanding the system the model lives inside.</p>
-        </div>
-        <div class="chapter-card reveal">
-          <div class="chapter-num">Chapter 03</div>
-          <div class="chapter-title">The Agentic Bet</div>
-          <p>I believe the next era of software is agentic: LLM-driven systems that reason, plan and act. LangGraph workflows, RAG memory, tool use — that's where I build, and where I'm headed.</p>
-        </div>
-      </div>
+<!-- ============ APPROACH ============ -->
+<section id="approach" data-char="B" data-side="left">
+  <div class="wrap"><div class="panel">
+    <h2>I plan the work, then build it</h2>
+    <p>Most of what I've shipped started with a scoped problem, a task breakdown, and a way to measure whether it worked. Here is how that looks on a real project.</p>
+    <p class="legend" style="margin-top:1em"><span class="p">Project management</span><span class="e">Engineering</span></p>
+    <ol class="pipe">
+      <li><strong>Define the problem</strong><span>Scope it and decide what success looks like before writing code. RazorFlow AI began as four flows to cover: product discovery, cart, checkout and payment.</span></li>
+      <li><strong>Break it down</strong><span>Split the work into parts that each have one job. RazorFlow became 10 LangGraph nodes with defined responsibilities, and the HCP CRM backend runs Routes → Service → Repository → ORM.</span></li>
+      <li><strong>Build with guardrails</strong><span>Decide what the model must never decide. RazorFlow's deterministic safeguards cover prompt injection, PII, pricing, spend limits and payments, so financial decisions stay outside the LLM.</span></li>
+      <li><strong>Test and measure</strong><span>Run evaluations before claiming anything works: 117 of 119 checks passed on RazorFlow's custom suite, and my research compared four or more model architectures on NSL-KDD and CICIDS.</span></li>
+      <li><strong>Ship and write it down</strong><span>Deploy it, then document results so others can act on them. RazorFlow runs on Render and Vercel; research findings became recommendations for threat detection and a paper under review.</span></li>
+    </ol>
+  </div></div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" data-char="C" data-side="right">
+  <div class="wrap"><div class="panel wide">
+    <h2>Where I've worked</h2>
+
+    <article class="entry">
+      <header>
+        <h3>Research Intern, AI &amp; Machine Learning</h3>
+        <p class="org">Motilal Nehru National Institute of Technology (MNNIT), Allahabad, on-site</p>
+        <p class="when">Jun 2026 – Present</p>
+      </header>
+      <ul class="b">
+        <li class="rv tp vp">Conducted structured research on intrusion detection systems, evaluating approaches across network traffic classification and anomaly detection.</li>
+        <li class="rv te vb ve">Evaluated 4+ machine learning model architectures (Random Forest, SVM, KNN) on the NSL-KDD and CICIDS benchmarks for network intrusion detection.</li>
+        <li class="rv te vb ve">Designed and tested a Physics-Constrained Transformer Autoencoder (Physics-TAE): ROC-AUC 0.9634, F1-score 0.9822, and 93% cryptojacking detection across 15 attack types on CICEVSE2024.</li>
+        <li class="rv tp vb vp">Planned and ran experiments across benchmark datasets and multiple models, comparing results through systematic testing and evaluation.</li>
+        <li class="rv tp vb vp">Documented findings and turned observations into recommendations for improving cyber threat detection; co-authored a research paper submitted to IEEE IoT Journal.</li>
+        <li class="rv te ve">Co-authored the resulting research paper, submitted to IEEE Internet of Things Journal.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <header>
+        <h3>Machine Learning Intern</h3>
+        <p class="org">Codveda Technology, remote</p>
+        <p class="when">May 2026 – Jun 2026</p>
+      </header>
+      <ul class="b">
+        <li class="rv te vb ve">Built and evaluated 8 machine learning models (Linear Regression, KNN, Decision Trees, Random Forest, SVM) using TensorFlow/Keras and scikit-learn.</li>
+        <li class="rv te vb ve">Developed feature engineering, hyperparameter tuning and cross-validation pipelines; visualized model performance with matplotlib and seaborn.</li>
+        <li class="rv tp vp">Built and evaluated models for regression, classification, clustering and neural-network tasks using TensorFlow/Keras and scikit-learn.</li>
+        <li class="rv tp vp">Developed feature-engineering, tuning and cross-validation workflows to systematically compare model performance and analyze results.</li>
+      </ul>
+    </article>
+
+    <div class="pub">
+      <h3>Publication</h3>
+      <p>Physics-Constrained Transformer Autoencoder for Zero-Day Cyberattack Detection in EV Charging Stations Using Hardware Performance Counters</p>
+      <p class="meta">Harsh Veer Singh, Himanshu Nandanwar, Manju Khari. IEEE Internet of Things Journal, under review (Sep 2026).</p>
     </div>
-  </section>
+  </div></div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section section-alt">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">02</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Stack</span>
-      </div>
-      <h2 class="section-title">The technical matrix</h2>
-      <div class="skills-grid" id="skillsGrid">
-        <!-- injected by skills.js -->
-      </div>
+<!-- ============ PROJECTS ============ -->
+<section id="projects" data-char="A" data-side="left">
+  <div class="wrap"><div class="panel wide">
+    <h2>Things I've built</h2>
+
+    <article class="card">
+      <h3>RazorFlow AI: agentic commerce and growth agent</h3>
+      <p class="sub">Razorpay Buildathon 2026</p>
+      <ul class="chips">
+        <li class="chip">LangGraph</li><li class="chip">FastAPI</li><li class="chip">React</li><li class="chip">Razorpay APIs</li><li class="chip">Render</li><li class="chip">Vercel</li>
+      </ul>
+      <ul class="b">
+        <li class="rv te vb ve">Built a 10-node LangGraph agent for conversational commerce on Razorpay APIs, across a 20-product catalog, with agent-to-agent commerce over a machine-readable protocol.</li>
+        <li class="rv te vb ve vp">Six layers of deterministic safeguards cover prompt injection, PII, pricing, spend limits and payment actions, so financial decisions stay outside the LLM.</li>
+        <li class="rv tp vp">Planned product discovery, cart, checkout and payment as 10 nodes with defined responsibilities, then validated them with automated evals across guardrails, payment, recovery, intent and LLM-quality tests.</li>
+        <li class="rv te vb ve">Scored 98.3% (117/119) on a custom eval suite and 51/51 on intent accuracy, with 80% fewer LLM API calls from a hybrid intent pipeline.</li>
+        <li class="rv tp vb ve vp">Deployed the FastAPI backend on Render and the React frontend on Vercel.</li>
+      </ul>
+      <!-- Replace the href below with the RazorFlow AI repo URL -->
+      <a class="btn small" href="https://github.com/VeerGetGit" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+
+    <article class="card">
+      <h3>HCP CRM: AI-powered interaction logger</h3>
+      <p class="sub">Full-stack AI CRM</p>
+      <ul class="chips">
+        <li class="chip">React 19</li><li class="chip">FastAPI</li><li class="chip">LangGraph</li><li class="chip">Groq (Llama 3.3 70B)</li><li class="chip">Supabase</li><li class="chip">PostgreSQL</li>
+      </ul>
+      <ul class="b">
+        <li class="rv te vb ve">Built a full-stack AI CRM around a LangGraph ReAct agent with 8 custom tools: log interactions in natural language, analyze sentiment, suggest follow-ups and edit records through chat.</li>
+        <li class="rv tp vp">Built a full-stack AI CRM with React, FastAPI, LangGraph and Supabase for AI-assisted interaction logging and workflow automation.</li>
+        <li class="rv tp vb ve vp">Layered the FastAPI backend as Routes → Service → Repository → ORM, with 4 REST endpoints and persistent PostgreSQL storage on Supabase.</li>
+      </ul>
+      <!-- Replace the href below with the HCP CRM repo URL -->
+      <a class="btn small" href="https://github.com/VeerGetGit" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+
+    <article class="card">
+      <h3>Agentic RAG chatbot: AI-powered college assistant</h3>
+      <p class="sub">Retrieval plus live web search</p>
+      <ul class="chips">
+        <li class="chip">Python</li><li class="chip">LangChain</li><li class="chip">ChromaDB</li><li class="chip">Tavily API</li>
+      </ul>
+      <ul class="b">
+        <li class="rv te vb ve vp">Multi-tool LLM agent with embedding-based semantic search over a four-source knowledge base (1 JSON file and 3 PDFs) covering faculty details, previous-year questions and college information.</li>
+        <li class="rv te vb ve vp">Added the Tavily API for live web results alongside answers grounded in the ChromaDB vector store.</li>
+      </ul>
+      <!-- Replace the href below with the Agentic RAG ChatBot repo URL -->
+      <a class="btn small" href="https://github.com/VeerGetGit" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+  </div></div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" data-char="C" data-side="right">
+  <div class="wrap"><div class="panel">
+    <h2>What I work with</h2>
+
+    <div class="group eng">
+      <h3>Languages and software</h3>
+      <ul class="chips"><li class="chip">Python</li><li class="chip">C++</li><li class="chip">FastAPI</li><li class="chip">Flask</li><li class="chip">React</li><li class="chip">Streamlit</li><li class="chip">REST APIs</li><li class="chip">Software integrations</li><li class="chip">Vite</li><li class="chip">Uvicorn</li></ul>
     </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">03</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Journey</span>
-      </div>
-      <h2 class="section-title">Where I've worked</h2>
-      <div class="exp-list" id="expList">
-        <!-- injected by experience.js -->
-      </div>
+    <div class="group eng">
+      <h3>AI and machine learning</h3>
+      <ul class="chips"><li class="chip">LangGraph</li><li class="chip">LangChain</li><li class="chip">RAG</li><li class="chip">Generative AI</li><li class="chip">ReAct agents</li><li class="chip">Agentic workflows</li><li class="chip">LLMs</li><li class="chip">Embeddings</li><li class="chip">Prompt engineering</li><li class="chip">Scikit-Learn</li><li class="chip">Machine learning</li></ul>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section section-alt">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">04</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Selected Work</span>
-      </div>
-      <h2 class="section-title">Agentic systems, shipped</h2>
-      <div class="project-list" id="projectList">
-        <!-- injected by projects.js -->
-      </div>
+    <div class="group eng">
+      <h3>Data and tools</h3>
+      <ul class="chips"><li class="chip">SQL</li><li class="chip">Supabase</li><li class="chip">ChromaDB</li><li class="chip">Vector databases</li><li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">VS Code</li></ul>
     </div>
-  </section>
-
-  <!-- HONORS -->
-  <section id="honors" class="section">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">05</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Honors</span>
-      </div>
-      <h2 class="section-title">Proof of work</h2>
-      <div class="honors-grid" id="honorsList">
-        <!-- injected by honors.js -->
-      </div>
+    <div class="group pmg">
+      <h3>Project and leadership</h3>
+      <ul class="chips"><li class="chip">Project execution</li><li class="chip">Requirements analysis</li><li class="chip">Task breakdown</li><li class="chip">Technical documentation</li><li class="chip">Problem solving</li><li class="chip">Event coordination</li><li class="chip">Team collaboration</li></ul>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
-    <div class="section-inner">
-      <div class="eyebrow">
-        <span class="eye-num">06</span>
-        <span class="eye-rule"></span>
-        <span class="eye-label">Contact</span>
-      </div>
-      <h2 class="section-title">Let's build something agentic</h2>
-      <div class="contact-layout">
-        <div class="contact-left">
-          <p>Have an idea that needs autonomous agents, a RAG pipeline, or a full-stack AI product? My inbox is open.</p>
-          <a href="mailto:harshveerstar1@gmail.com" class="contact-email" id="emailLink">
-            harshveerstar1@gmail.com
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          </a>
-          <div class="contact-location">Prayagraj, IN — <span id="clock"></span> IST</div>
-          <div class="contact-socials">
-            <a href="https://github.com/harshveerstar" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/harshveersingh" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="contact-form-wrap">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label class="form-label" for="f-name">Name</label>
-              <input type="text" id="f-name" class="form-input" placeholder="Your name" autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="f-email">Email</label>
-              <input type="email" id="f-email" class="form-input" placeholder="you@example.com" autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="f-message">Message</label>
-              <textarea id="f-message" class="form-textarea" placeholder="Tell me about your project..."></textarea>
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-send">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="m22 2-11 11"/></svg>
-                Send message
-              </button>
-              <a href="mailto:harshveerstar1@gmail.com" class="btn-mail">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-                OR OPEN IN YOUR MAIL APP
-              </a>
-            </div>
-            <div id="formMsg" class="form-message" aria-live="polite"></div>
-          </form>
-        </div>
-      </div>
+    <div class="edu">
+      <h3>Education</h3>
+      <p>B.Tech, Computer Science &amp; Engineering, 2023 – 2027<br><span class="mute">United College of Engineering &amp; Research, Prayagraj. CGPA 8.46</span></p>
+      <p>Intermediate (XII) 2021, 87% · Secondary (X) 2019, 88.4%<br><span class="mute">MPVM: Ganga Gurukulam, Prayagraj</span></p>
     </div>
-  </section>
+  </div></div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-logo">HVS<span>.</span></span>
-      <span class="footer-copy">© 2026 Harsh Veer Singh</span>
-      <span class="footer-tag">Built with intent. Shipped for real.</span>
+<!-- ============ BEYOND THE CODE ============ -->
+<section id="beyond" data-char="B" data-side="left">
+  <div class="wrap"><div class="panel">
+    <h2>Beyond the code</h2>
+    <ul class="b">
+      <li class="tp"><strong>Student Event Coordinator.</strong> Planned and ran campus events, working with students and organizers to keep activities on track.</li>
+      <li class="tp"><strong>Campus Ambassador, Mindenious Edutech.</strong> Represented the organization on campus and supported outreach, event promotion and student engagement.</li>
+      <li class="tn"><strong>Winner, Ad Mania: Convert Idea to Business.</strong> An entrepreneurship and product ideation competition.</li>
+      <li class="te"><strong>Top 5 finalist, HackQuest Hackathon.</strong> Competitive ML/AI track with a large national field.</li>
+      <li class="te"><strong>Round 2 qualifier, Smart India Hackathon.</strong> National-level government innovation challenge.</li>
+    </ul>
+    <p class="small-print">Away from the screen: badminton and Japanese literature.</p>
+  </div></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" data-char="A" data-side="right">
+  <div class="wrap"><div class="panel">
+    <h2>Let's talk</h2>
+    <p>I'm seeking a technical project management internship, and I'm glad to talk about AI/ML engineering work too. Email is the fastest way to reach me.</p>
+    <div class="contact-links">
+      <a class="btn primary" href="mailto:harshveerstar1@gmail.com">harshveerstar1@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/hveersingh" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/VeerGetGit" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </footer>
+    <p class="small-print">Based in Prayagraj, Uttar Pradesh, India. © 2026 Harsh Veer Singh.</p>
+  </div></div>
+</section>
 
-  <!-- Scripts (order matters) -->
-  <script src="js/data.js"></script>
-  <script src="js/stars.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/render.js"></script>
-  <script src="js/reveal.js"></script>
-  <script src="js/contact.js"></script>
+</main>
+
+<!-- =====================================================
+     UI + pointer state (classic script, works even if 3D fails)
+     ===================================================== -->
+<script src="js/ui.js"></script>
+
+<!-- =====================================================
+     3D scene: spacetime fabric, characters, lens
+     ===================================================== -->
+<script type="module" src="js/scene.js"></script>
 </body>
 </html>
